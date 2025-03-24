@@ -101,10 +101,9 @@ Key features include:
    - During animation, the moving cow is rendered frame-by-frame using the interpolated position and orientation.
 
 ## 4. How to run
-Move to the PA2_2024 file   
-`cd ./CGAssignment/PA2_2024`
+Move to the PA2_2024 file `cd ./CGAssignment/PA2_2024`
 
-Run the SimpleScene.py file   
-`python SimpleScene.py`
+Run the SimpleScene.py file `python SimpleScene.py`
 
 ## 5. Results
+![Cow Roller Coaster Demo](./CGAssignment/PA2_2024/PA2_2024.gif) 
