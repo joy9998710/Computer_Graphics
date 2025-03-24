@@ -58,7 +58,7 @@ Move into PA1_2024 file
 ![Phong example](./CGAssignment/PA1_2024/scenes/one-sphere.xml.png)
 
 
-#PA2_2024 (
+# PA2_2024 
 
 ## 1. Introduction   
 This project implements an interactive 3D animation system called the **Cow Roller Coaster**. The objective is to build an intuitive control interface for defining motion trajectories, and animate a 3D cow model using a **Hermite spline curve** for smooth interpolation.
