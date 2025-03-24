@@ -57,3 +57,54 @@ Move into PA1_2024 file
 **Phong Shading Example**   
 ![Phong example](./CGAssignment/PA1_2024/scenes/one-sphere.xml.png)
 
+
+#PA2_2024 (
+
+## 1. Introduction   
+This project implements an interactive 3D animation system called the **Cow Roller Coaster**. The objective is to build an intuitive control interface for defining motion trajectories, and animate a 3D cow model using a **Hermite spline curve** for smooth interpolation.
+
+Key features include:
+- Picking and positioning a 3D cow model using mouse input
+- Vertical and horizontal dragging to place control points
+- Interpolation of six user-defined positions using a Hermite spline curve
+- Real-time animation of the cow along the path with proper orientation (yaw and pitch)
+
+## 2. Environment   
+- Language : Python
+- Tools : OpenGL, GLFW, numpy, PIL
+
+## 3. Workflow
+
+1. **Mouse-Based Cow Placement**
+   - The user selects a cow model by left-clicking.
+   - Six control points are defined via successive clicks.
+   - Each click duplicates the cow model at the selected position.
+
+2. **Vertical and Horizontal Dragging**
+   - Vertical dragging is performed using ray-plane intersection based on cursor input.
+   - Horizontal dragging reuses the fixed dragging plane captured during vertical drag.
+   - The plane position is maintained via a global variable (`glob_plane_pos`).
+
+3. **Control Point Recording**
+   - On each click, the cow’s position is stored in `glob_cow_pos`.
+   - Once all six points are selected, the animation process begins.
+
+4. **Hermite Spline Animation**
+   - A Hermite spline curve is constructed using the six control points.
+   - The cow moves along the spline based on relative time (via `glfw.get_time()`).
+   - Position is calculated using cubic Hermite interpolation.
+   - The derivative of the spline is used to determine orientation (direction and pitch).
+   - The cow follows the path 3 full cycles and then returns to interactive mode.
+
+5. **Rendering and Display**
+   - During the placement phase, static cows are drawn at selected points.
+   - During animation, the moving cow is rendered frame-by-frame using the interpolated position and orientation.
+
+## 4. How to run
+Move to the PA2_2024 file   
+`cd ./CGAssignment/PA2_2024`
+
+Run the SimpleScene.py file   
+`python SimpleScene.py`
+
+## 5. Results
